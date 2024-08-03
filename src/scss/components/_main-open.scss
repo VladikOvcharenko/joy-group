@@ -1,0 +1,150 @@
+.main-open {
+  position: relative;
+
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  background-color: var(--bg-color);
+  background-image: url('../img/main-open_bg.png');
+
+  @include small-tablet {
+    padding-top: 7vw;
+    padding-bottom: 150px;
+    height: auto;
+    background-position: right bottom;
+    background-size: auto 430px;
+  }
+  @include mobile {
+    background-size: auto 400px;
+  }
+
+  &__decor {
+    top: 0;
+    left: 0;
+  }
+  &__sky {
+    z-index: 1;
+    bottom: 0;
+  }
+  &__star {
+    top: 100px;
+    right: 100px;
+  }
+
+  &__container {
+    height: 45vw;
+    padding-bottom: 100px;
+    z-index: 3;
+    position: relative;
+    width: 92vw;
+    margin-inline: auto;
+    display: flex;
+    gap: 200px;
+
+    @include small-tablet {
+      flex-direction: column;
+      justify-content: center;
+      width: 90vw;
+    }
+  }
+  &__info {
+    padding-top: 172px;
+
+    max-width: 33vw;
+
+    @include small-tablet {
+      max-width: 98vw;
+    }
+  }
+  &__title {
+    text-align: left;
+    @include mobile {
+      font-size: 26px;
+    }
+  }
+  &__subtitle {
+    margin: 1vw 0 2vw;
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 140%;
+    color: var(--font-color);
+    opacity: 0.8;
+
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+  &__text {
+    margin-top: 2vw;
+  }
+
+  &__box {
+    margin-top: auto;
+    // z-index: 2;
+    position: relative;
+    // padding-top: 7vw;
+
+    @include small-tablet {
+      padding-top: 0;
+      padding-bottom: 200px;
+      display: flex;
+      justify-content: center;
+    }
+
+    @include mobile {
+      margin-top: 30px;
+      margin-left: 50px;
+      justify-content: start;
+    }
+  }
+  &__link {
+    position: relative;
+    display: block;
+
+    @include small-tablet {
+      // margin-inline: auto;
+    }
+
+    svg {
+      width: 7vw;
+      height: auto;
+
+      @include mobile {
+        min-width: 60px;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: -5vw;
+      width: 5vw;
+      height: 4.5vw;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('../img/main-open_arrow.png');
+    }
+    &::after {
+      position: absolute;
+      top: -140px;
+      left: -8vw;
+      width: 12vw;
+      min-width: 220px;
+      height: auto;
+      content: 'Посмотрите короткое 45 секундное видео о компании';
+      font-family: var(--font-family);
+      font-style: italic;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 140%;
+      color: var(--font-color);
+      @include small-tablet {
+        top: -10vw;
+        font-size: 14px;
+        min-width: 160px;
+      }
+    }
+  }
+}

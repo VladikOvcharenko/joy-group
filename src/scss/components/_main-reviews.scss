@@ -1,0 +1,98 @@
+.main-reviews {
+  position: relative;
+  padding: 80px 0;
+
+  &__ring {
+    top: -200px;
+    right: -800px;
+  }
+
+  &__star {
+    top: 100px;
+    left: 150px;
+
+    &-big {
+      top: 600px;
+      right: 200px;
+    }
+  }
+
+  &__container {
+    position: relative;
+    margin-inline: auto;
+    max-width: 1140px;
+  }
+  &__title {
+    text-align: center;
+  }
+
+  &__item {
+    position: relative;
+    margin: 0 10px;
+    padding: 180px 0;
+
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 95%,
+      rgba(255, 255, 255, 0.2) 5%
+    );
+  }
+
+  &__cloud-medium {
+    bottom: -4px;
+    width: 792px;
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 586px;
+    z-index: -1 !important;
+  }
+  &__wrapper {
+    display: grid;
+    justify-items: end;
+    gap: 30px;
+  }
+  &__box {
+    max-width: 620px;
+    padding: 30px;
+
+    display: grid;
+    grid-template-columns: max(110px) 1fr;
+    column-gap: 30px;
+    align-items: center;
+
+    border-radius: 38px;
+    box-shadow: 0 15px 20px 0 rgba(218, 192, 167, 0.5);
+    background: var(--light-color);
+  }
+  &__play {
+    grid-row: 2 span;
+    width: 110px;
+    height: 110px;
+  }
+  &__name {
+    font-size: 20px;
+    opacity: 0.5;
+  }
+  &__desc {
+    font-size: 28px;
+    line-height: 120%;
+  }
+  &__text {
+    max-width: 500px;
+    font-size: 16px;
+    opacity: 0.8;
+  }
+  &__btn {
+    top: 60%;
+
+    &-next {
+      right: -100px;
+    }
+    &-prev {
+      left: -100px;
+    }
+  }
+}

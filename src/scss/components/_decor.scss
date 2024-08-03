@@ -1,0 +1,14 @@
+.decor,
+.decor-big {
+  position: absolute;
+  width: 26vw;
+  height: 40vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../img/decor.png');
+  &-big {
+    width: 42vw;
+    height: 64vw;
+  }
+}

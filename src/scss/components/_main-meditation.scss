@@ -1,0 +1,61 @@
+.main-meditation {
+  position: relative;
+  padding: 80px 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0) 45%,
+    var(--bg-color) 55%
+  );
+
+  &__line {
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    right: -90%;
+    height: 464px;
+    width: 1208px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../img/main-meditation-line.png');
+  }
+  &__container {
+    position: relative;
+    max-width: 1100px;
+  }
+
+  &__ring {
+    top: -200px;
+    left: -800px;
+  }
+  &__star-big {
+    top: 20%;
+    left: 50%;
+  }
+
+  &__sky {
+    z-index: 1;
+    top: 15%;
+  }
+
+  &__wrapper {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__info {
+    display: grid;
+    justify-items: start;
+    gap: 36px;
+  }
+  &__text {
+    z-index: 5;
+    max-width: 420px;
+  }
+  &__link {
+  }
+  &__img {
+    z-index: 5;
+  }
+}

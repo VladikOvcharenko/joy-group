@@ -1,0 +1,30 @@
+// базовые подключения
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'settings';
+
+// подключения компонентов страницы
+@import './components/header';
+@import './components/footer';
+
+//components
+@import './components/btn';
+@import './components/star';
+@import './components/sky';
+@import './components/ring';
+@import './components/cloud';
+@import './components/decor';
+
+//main-page
+@import './components/main-hero';
+@import './components/main-open';
+@import './components/main-about';
+@import './components/main-services';
+@import './components/main-process';
+@import './components/main-result';
+@import './components/main-reviews';
+@import './components/main-meeting';
+@import './components/main-publications';
+@import './components/main-meditation';
+@import './components/main-questions';

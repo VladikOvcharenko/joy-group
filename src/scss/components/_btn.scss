@@ -1,0 +1,39 @@
+.btn {
+  padding: 21px 40px;
+
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--font-color);
+
+  border: 3px solid var(--accent-color);
+  border-radius: 100px;
+  box-shadow: 0 20px 30px 0 rgba(218, 192, 167, 0.5);
+  background: linear-gradient(
+    181deg,
+    #ffe9d4 0.58%,
+    #ffe9d4 31.31%,
+    #e0c6ad 53.54%,
+    #cda37b 72.05%,
+    #cda37b 100%
+  );
+
+  &-nav {
+    z-index: 9;
+    margin: 15px;
+    position: absolute;
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: var(--accent-color);
+    box-shadow: 0 10px 20px 0 rgba(218, 192, 167, 0.5);
+  }
+}

@@ -1,0 +1,22 @@
+.ring {
+  position: absolute;
+
+  width: 670px;
+  height: 670px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../img/main-about_ring.png');
+
+  animation: rotate 300s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    animation-timing-function: linear;
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
