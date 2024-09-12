@@ -6,39 +6,75 @@
     z-index: -1;
     top: 350px;
     left: -400px;
+    @include small-tablet {
+      top: 150px;
+    }
   }
   &__decor {
     top: 100px;
     right: -50px;
     transform: rotateY(180deg);
   }
+  &__line {
+    z-index: -2;
+    top: 600px;
+    right: -220px;
+  }
   &__container {
     position: relative;
     display: grid;
     justify-items: center;
+
+    @include small-tablet {
+      justify-items: start;
+    }
   }
   &__logo {
-    width: 493px;
-    height: 215px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & img {
+      width: 22vw;
+      @include small-tablet {
+        width: 40vw;
+      }
+      @include mobile {
+        width: 60vw;
+      }
+    }
 
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url('../img/main-about_logo.png');
+    @include small-tablet {
+      margin-inline: auto;
+    }
   }
   &__text {
     margin-top: 40px;
     max-width: 884px;
     text-align: center;
+    @include mobile {
+      margin-top: 20px;
+    }
   }
   &__title {
     margin-top: 102px;
     text-align: center;
+
+    @include big-desktop {
+      margin-top: 60px;
+    }
+    @include small-tablet {
+      margin-inline: auto;
+    }
     &-name {
       text-align: center;
       text-transform: none;
       font-size: 120px;
       line-height: 100%;
       font-family: var(--third-family);
+
+      @include mobile {
+        line-height: 70%;
+      }
     }
   }
   &__box {
@@ -50,32 +86,34 @@
     background: var(--light-color);
     box-shadow: 0 20px 30px 0 rgba(218, 192, 167, 0.5);
 
-    &::before {
+    @include big-desktop {
+      margin-top: 30px;
+      padding: 36px 40px;
+    }
+
+    @include small-tablet {
+      max-width: 450px;
+    }
+
+    @include mobile {
+      margin-top: 0;
+    }
+
+    &::after {
       z-index: -1;
       position: absolute;
-      content: '';
+      content: "";
       width: 930px;
       height: 805px;
       top: -100px;
       right: -650px;
       background-repeat: no-repeat;
       background-position: center;
-      background-image: url('../img/main-about_photo.png');
-    }
-    &::after {
-      z-index: -2;
-      position: absolute;
-      content: '';
-      width: 860px;
-      height: 1210px;
-      top: -100px;
-      right: -650px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-image: url('../img/main-about_line.png');
+      background-image: url("../img/main-about_photo.webp");
     }
 
     &-title {
+      text-align: left;
       font-family: var(--font-family);
       font-weight: 300;
       font-size: 35px;

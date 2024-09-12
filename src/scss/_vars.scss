@@ -2,12 +2,14 @@
 // colors
 :root {
   // base
-  --font-family: 'Lato', sans-serif;
-  --second-family: 'TenorSans', sans-serif;
-  --third-family: 'MissKatherine', sans-serif;
+  --font-family: "Lato", sans-serif;
+  --second-family: "TenorSans", sans-serif;
+  --third-family: "MissKatherine", sans-serif;
 
   --content-width: 1460px;
-  --container-offset: 15px;
+  --container-offset: clamp(0.938rem, -3.125rem + 14.44vw, 5rem);
+  // --container-offset: clamp(0.938rem, -3.75rem + 16.67vw, 2.5rem);
+  // --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors

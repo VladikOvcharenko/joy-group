@@ -1,11 +1,12 @@
 .main-hero {
   width: 100%;
   height: 100vh;
+  padding-bottom: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background-image: url('../img/main-hero_bg.jpg');
+  background-image: url("../img/main-hero_bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,32 +19,39 @@
     gap: 42px;
   }
   &__title {
-    margin: 0;
-    font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 80px;
+    font-size: clamp(2.5rem, 0.769rem + 6.15vw, 5rem);
     line-height: 112%;
-    text-transform: uppercase;
     text-align: center;
-    color: #fff;
+    color: var(--light-color);
+
     &-decor {
       text-transform: none;
       font-family: var(--third-family);
       font-size: 160px;
       line-height: 100%;
+      @include big-desktop {
+        font-size: 130px;
+      }
     }
   }
   &__btn {
     padding: 21px 75px;
     margin-inline: auto;
     text-align: center;
+    @include big-desktop {
+      padding: 14px 56px;
+    }
   }
   &__text {
-    margin: 0;
-    font-family: var(--second-family);
     font-weight: 300;
     font-size: 23px;
     text-align: center;
     color: var(--light-color);
+    @include big-desktop {
+      font-size: 20px;
+    }
+    @include mobile {
+      font-size: 16px;
+    }
   }
 }

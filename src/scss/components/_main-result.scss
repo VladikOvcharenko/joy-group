@@ -9,14 +9,19 @@
 
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     top: 80px;
     left: 0;
     width: 858px;
     height: 1200px;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url('../img/main-result_line.png');
+    background-image: url("../img/main-result_line.webp");
+
+    @include mobile {
+      top: -80px;
+      width: 370px;
+    }
   }
 
   &__container {
@@ -29,13 +34,28 @@
   }
   &__sky {
     top: 16%;
+    @include small-tablet {
+      top: 20%;
+    }
+    @include mobile {
+      top: 10%;
+    }
   }
   &__star {
     top: 200px;
     right: -50px;
+
+    @include mobile {
+      top: 40px;
+      right: 0px;
+    }
     &-big {
       top: 450px;
       left: 0px;
+      @include mobile {
+        top: 500px;
+        left: 150px;
+      }
     }
   }
   &__title {
@@ -48,12 +68,24 @@
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     row-gap: 44px;
+
+    @include small-tablet {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include mobile {
+      row-gap: 28px;
+    }
   }
   &__item {
     width: 264px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 24px;
+
+    @include mobile {
+      width: 180px;
+    }
   }
   &__img {
     z-index: 3;
@@ -66,6 +98,19 @@
     border-radius: 50%;
     background: var(--light-color);
     box-shadow: 0 12px 20px 0 rgba(177, 155, 133, 0.3);
+
+    @include tablet {
+      width: 224px;
+      height: 224px;
+    }
+    @include mobile {
+      width: 100px;
+      height: 100px;
+      svg {
+        width: 80px;
+        height: 80px;
+      }
+    }
   }
   &__text {
     font-family: var(--font-family);
@@ -75,6 +120,14 @@
     text-align: center;
     color: var(--font-color);
     opacity: 0.8;
+
+    @include tablet {
+      font-size: 18px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   &__btn {

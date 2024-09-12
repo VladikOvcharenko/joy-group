@@ -1,0 +1,94 @@
+<div class="graph-modal modal">
+  <div
+    class="graph-modal__container modal__container"
+    role="dialog"
+    aria-modal="true"
+    data-graph-target="modal"
+  >
+    <button
+      class="btn-reset graph-modal__close js-modal-close"
+      aria-label="Закрыть модальное окно"
+    ></button>
+    <div class="graph-modal__content modal__content">
+      <h2 class="modal__title title">Заполните форму</h2>
+      <form class="modal__form">
+        <input type="name" placeholder="Ваше Имя" class="modal__form-inputs" />
+
+        <div class="modal__dropdown dropdown">
+          <div class="dropdown__wrapper">
+            <div class="dropdown__btn">Какой у Вас вопрос?</div>
+            <ul class="dropdown__list list-reset">
+              <li class="dropdown__list-item" data-value="family">Семья</li>
+              <li class="dropdown__list-item" data-value="sex">
+                Отношения и секс
+              </li>
+              <li class="dropdown__list-item" data-value="finance">
+                Финансы и карьера
+              </li>
+              <li class="dropdown__list-item" data-value="health">Здоровье</li>
+              <li class="dropdown__list-item" data-value="Anxiety">Тревога</li>
+              <li class="dropdown__list-item" data-value="Fear">Страх</li>
+              <li class="dropdown__list-item" data-value="Stress">Стресс</li>
+              <li class="dropdown__list-item" data-value="search">
+                Поиск новых ориентиров
+              </li>
+            </ul>
+            <input
+              type="text"
+              class="dropdown__list-input"
+              name="question"
+              value=""
+            />
+          </div>
+        </div>
+        <input
+          type="text"
+          name="age"
+          placeholder="Ваш возраст"
+          class="modal__form-inputs"
+        />
+        <textarea
+          name="problem"
+          id=""
+          placeholder="Опишите Вашу ситуацию "
+          class="modal__form-inputs modal__form-text"
+        ></textarea>
+        <span class="modal__form-subtitle subtitle">Как с вами связаться?</span>
+
+        <div class="modal__dropdown dropdown">
+          <div class="dropdown__wrapper">
+            <div class="dropdown__btn">Куда удобнее Вам написать?</div>
+            <ul class="dropdown__list list-reset">
+              <li class="dropdown__list-item" data-value="telegram">
+                Telegram
+              </li>
+              <li class="dropdown__list-item" data-value="whatsapp">
+                WhatsApp
+              </li>
+            </ul>
+            <input
+              type="text"
+              class="dropdown__list-input"
+              name="communication"
+              value=""
+            />
+          </div>
+        </div>
+
+        <input
+          type="tel"
+          placeholder="(000)-000-00-00"
+          class="modal__form-inputs"
+        />
+        <span class="modal__form-police"
+          >Телефон необходим только для того, чтобы психолог связался с вами в
+          мессенджере</span
+        >
+
+        <button class="modal__form-btn btn-reset btn">
+          записаться на сессию
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

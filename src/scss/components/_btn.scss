@@ -1,5 +1,6 @@
 .btn {
-  padding: 21px 40px;
+  display: block;
+  padding: 18px 40px;
 
   font-family: var(--font-family);
   font-weight: 500;
@@ -21,6 +22,11 @@
     #cda37b 100%
   );
 
+  @include tablet {
+    padding: 12px 30px;
+    font-size: 12px;
+  }
+
   &-nav {
     z-index: 9;
     margin: 15px;
@@ -35,5 +41,13 @@
     border-radius: 50%;
     background: var(--accent-color);
     box-shadow: 0 10px 20px 0 rgba(218, 192, 167, 0.5);
+    @include mobile {
+      width: 32px;
+      height: 32px;
+      svg {
+        width: 10px;
+        height: 14px;
+      }
+    }
   }
 }

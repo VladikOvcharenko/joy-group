@@ -3,6 +3,9 @@
 *::after {
   box-sizing: border-box;
 }
+html {
+  scroll-padding-top: 50px;
+}
 
 .page {
   height: 100%;
@@ -88,9 +91,9 @@ a {
 }
 
 .dis-scroll {
-  position: fixed;
-  left: 0;
-  top: 0;
+  // position: fixed;
+  // left: 0;
+  // top: 0;
   overflow: hidden;
   width: 100%;
   height: 100vh;
@@ -106,7 +109,8 @@ a {
   text-align: center;
   font-family: var(--second-family);
   font-weight: 400;
-  font-size: 44px;
+  // font-size: 44px;
+  font-size: clamp(1.625rem, 1.185rem + 1.57vw, 2.75rem);
   line-height: 140%;
   text-transform: uppercase;
   color: var(--font-color);
@@ -119,7 +123,8 @@ a {
   margin: 0;
   font-family: var(--font-family);
   font-weight: 300;
-  font-size: 32px;
+  // font-size: 32px;
+  font-size: clamp(1.375rem, 0.75rem + 2.22vw, 2rem);
   line-height: 140%;
   text-align: center;
   color: var(--font-color);
@@ -130,7 +135,8 @@ a {
   margin: 0;
   font-family: var(--second-family);
   font-weight: 400;
-  font-size: 18px;
+  // font-size: 18px;
+  font-size: clamp(0.875rem, 0.777rem + 0.35vw, 1.125rem);
   line-height: 140%;
   color: var(--font-color);
   @include mobile {
@@ -138,13 +144,12 @@ a {
   }
 }
 
-// @keyframes sky {
-//   0% {
-//     transform: translateX(0%);
-//   }
-//   100% {
-//     transform: translate3d(-100%, 0, 0);
-//   }
-// }
+.burger {
+  @include burger;
+  color: var(--accent-color);
+  display: none;
 
-// animation:  60s infinite linear;
+  @include tablet {
+    display: block;
+  }
+}

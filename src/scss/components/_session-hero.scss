@@ -1,0 +1,103 @@
+.session-hero {
+  position: relative;
+  padding: 200px 0 100px;
+  background: var(--bg-color);
+  @include big-desktop {
+    padding: 130px 0 100px;
+  }
+  @include tablet {
+    padding: 100px 0 100px;
+  }
+  &__decor {
+    top: 100px;
+    right: -50px;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  &__sky {
+    bottom: 0;
+  }
+  &__star {
+    top: 0;
+
+    &-big {
+      bottom: 0;
+      right: 0;
+    }
+  }
+  &__container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+    }
+    @include mobile {
+      gap: 20px;
+    }
+  }
+  &__video {
+    position: relative;
+    min-height: 650px;
+
+    height: 100%;
+
+    @include mobile {
+      min-height: 450px;
+    }
+    &-ring {
+      top: 0;
+      width: 100%;
+      @include mobile {
+        height: 450px;
+      }
+    }
+
+    &-img {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+    &-btn {
+      z-index: 5;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      position: absolute;
+      width: 78px;
+      height: 78px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--accent-color);
+    }
+  }
+
+  &__wrapper {
+    padding: 56px 0;
+    max-width: 600px;
+    display: grid;
+    justify-items: start;
+    gap: 40px;
+
+    @include small-tablet {
+      padding: 0;
+    }
+    @include mobile {
+      justify-items: center;
+    }
+  }
+  &__title {
+  }
+  &__text {
+  }
+  &__link {
+  }
+}

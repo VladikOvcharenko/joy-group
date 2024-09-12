@@ -1,6 +1,6 @@
 .footer {
   position: relative;
-  padding-top: 250px;
+  padding-top: 200px;
   background: var(--bg-color);
 
   &__sky {
@@ -19,6 +19,15 @@
     display: flex;
     justify-content: space-between;
     gap: 50px;
+
+    @include big-desktop {
+      gap: 30px;
+    }
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+    }
   }
   &__info {
     max-width: 290px;
@@ -39,6 +48,9 @@
       text-decoration: underline;
       text-decoration-skip-ink: none;
       color: var(--font-color);
+      @include tablet {
+        display: none;
+      }
     }
   }
   &__nav {
@@ -47,6 +59,11 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      @include mobile {
+        flex-direction: column;
+        gap: 8px;
+      }
     }
     &-item {
     }
@@ -58,12 +75,16 @@
     }
   }
   &__contact {
-    max-width: 345px;
+    max-width: 270px;
     width: 100%;
 
     display: flex;
     flex-direction: column;
     gap: 12px;
+
+    @include tablet {
+      align-items: center;
+    }
     &__title {
       font-family: var(--second-family);
       font-weight: 400;
@@ -73,7 +94,7 @@
     &-phone {
       font-family: var(--second-family);
       font-weight: 400;
-      font-size: 24px;
+      font-size: 32px;
       color: #000;
     }
     &-adress {

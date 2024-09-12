@@ -5,7 +5,8 @@
   height: 670px;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url('../img/main-about_ring.png');
+  background-size: contain;
+  background-image: url("../img/main-about_ring.webp");
 
   animation: rotate 300s infinite linear;
 }

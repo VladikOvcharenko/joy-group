@@ -8,16 +8,30 @@
     var(--bg-color) 55%
   );
 
+  @include mobile {
+    padding: 40px 0;
+  }
+
   &__line {
     z-index: 3;
     position: absolute;
     top: 0;
-    right: -90%;
+    right: -80%;
     height: 464px;
     width: 1208px;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url('../img/main-meditation-line.png');
+    background-image: url("../img/line-1.webp");
+    @include small-tablet {
+      top: 10%;
+      right: -26%;
+    }
+    @include mobile {
+      top: 60%;
+      right: -50%;
+      height: 230px;
+      width: 600px;
+    }
   }
   &__container {
     position: relative;
@@ -26,11 +40,18 @@
 
   &__ring {
     top: -200px;
-    left: -800px;
+    left: -600px;
   }
   &__star-big {
     top: 20%;
     left: 50%;
+
+    @include small-tablet {
+      left: 40%;
+    }
+    @include mobile {
+      left: 70%;
+    }
   }
 
   &__sky {
@@ -38,24 +59,43 @@
     top: 15%;
   }
 
+  &__subtitle {
+  }
+
   &__wrapper {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mobile {
+      gap: 20px;
+      flex-direction: column-reverse;
+    }
   }
   &__info {
     display: grid;
     justify-items: start;
     gap: 36px;
+
+    @include mobile {
+      justify-items: center;
+    }
   }
   &__text {
     z-index: 5;
-    max-width: 420px;
+    max-width: 520px;
+
+    @include mobile {
+      text-align: center;
+    }
   }
   &__link {
   }
   &__img {
     z-index: 5;
+    @include mobile {
+      height: 350px;
+    }
   }
 }

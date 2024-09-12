@@ -1,0 +1,37 @@
+.about-certificate {
+  padding: 40px 0;
+  &__container {
+    position: relative;
+    margin-inline: auto;
+  }
+  &__star-big {
+    top: 0;
+    left: 0;
+  }
+  &__line {
+    bottom: -200px;
+  }
+  &__title {
+  }
+  &__subtitle {
+  }
+  &__slider {
+    margin-top: 60px;
+
+    &-item {
+      max-width: 466px;
+      img {
+        border-radius: 20px;
+      }
+    }
+  }
+  &__btn {
+    top: 60%;
+    &-prev {
+      left: -80px;
+    }
+    &-next {
+      right: -70px;
+    }
+  }
+}

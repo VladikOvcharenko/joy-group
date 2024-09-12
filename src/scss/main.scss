@@ -1,30 +1,50 @@
 // базовые подключения
-@import 'vars';
-@import 'mixins';
-@import 'fonts';
-@import 'settings';
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
 
 // подключения компонентов страницы
-@import './components/header';
-@import './components/footer';
+@import "./components/header";
+@import "./components/footer";
 
 //components
-@import './components/btn';
-@import './components/star';
-@import './components/sky';
-@import './components/ring';
-@import './components/cloud';
-@import './components/decor';
+@import "./components/btn";
+@import "./components/star";
+@import "./components/sky";
+@import "./components/ring";
+@import "./components/cloud";
+@import "./components/decor";
+@import "./components/line";
+@import "./components/modal";
 
 //main-page
-@import './components/main-hero';
-@import './components/main-open';
-@import './components/main-about';
-@import './components/main-services';
-@import './components/main-process';
-@import './components/main-result';
-@import './components/main-reviews';
-@import './components/main-meeting';
-@import './components/main-publications';
-@import './components/main-meditation';
-@import './components/main-questions';
+@import "./components/main-hero";
+@import "./components/main-open";
+@import "./components/main-about";
+@import "./components/main-services";
+@import "./components/main-process";
+@import "./components/main-result";
+@import "./components/main-reviews";
+@import "./components/main-meeting";
+@import "./components/main-publications";
+@import "./components/main-meditation";
+@import "./components/main-questions";
+
+//about-page
+@import "./components/about-hero";
+@import "./components/about-motto";
+@import "./components/about-comfort";
+@import "./components/about-certificate";
+
+//session-page
+@import "./components/session-hero";
+@import "./components/session-requests";
+@import "./components/session-price";
+
+//session-page
+@import "./components/meditation-hero";
+@import "./components/meditation-price";
+
+@import "./components/dropdown";
+@import "./components/modal-video";

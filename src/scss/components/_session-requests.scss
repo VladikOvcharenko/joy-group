@@ -1,0 +1,63 @@
+.session-requests {
+  position: relative;
+  padding: 50px 0;
+  &__line {
+    top: -114px;
+    left: -450px;
+    transform: rotate(90deg);
+
+    @include small-tablet {
+      left: -600px;
+      top: -70px;
+    }
+  }
+  &__container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+  &__ring {
+    z-index: -1;
+    left: 0;
+    bottom: -450px;
+    width: 45%;
+
+    @include small-tablet {
+      width: 60%;
+      bottom: -370px;
+      right: -150px;
+      left: auto;
+    }
+  }
+  &__star {
+    top: 0;
+    right: 0;
+    @include mobile {
+      top: 90px;
+    }
+  }
+
+  &__title {
+    text-align: left;
+
+    @include small-tablet {
+      text-align: center;
+    }
+  }
+  &__list {
+    display: grid;
+    gap: 25px;
+    &-item {
+      padding-left: 42px;
+      background-repeat: no-repeat;
+      background-size: 24px;
+      background-position: left center;
+      background-image: url("../img/ok.png");
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.line {
+  z-index: 3;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  &-1 {
+    height: 464px;
+    width: 1208px;
+    background-image: url("../img/line-1.webp");
+  }
+  &-2 {
+    width: 860px;
+    height: 1200px;
+    background-image: url("../img/line-2.webp");
+  }
+  &-3 {
+    width: 1900px;
+    height: 160px;
+    background-image: url("../img/line-3.svg");
+  }
+}

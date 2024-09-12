@@ -1,21 +1,14 @@
 .main-open {
   position: relative;
-
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-size: contain;
-  background-color: var(--bg-color);
-  background-image: url('../img/main-open_bg.png');
+  background-size: cover;
+  background-color: #f3ece5;
+  background-image: url("../img/main-open_bg.webp");
 
-  @include small-tablet {
-    padding-top: 7vw;
-    padding-bottom: 150px;
-    height: auto;
-    background-position: right bottom;
-    background-size: auto 430px;
-  }
   @include mobile {
-    background-size: auto 400px;
+    background-size: 1000px 460px;
+    background-position: -460px 184px;
   }
 
   &__decor {
@@ -29,27 +22,35 @@
   &__star {
     top: 100px;
     right: 100px;
+    @include small-tablet {
+      top: 100px;
+      right: 250px;
+    }
+
+    @include mobile {
+      top: 60px;
+      right: 0px;
+    }
   }
 
   &__container {
-    height: 45vw;
-    padding-bottom: 100px;
+    height: 46vw;
+    min-height: 500px;
     z-index: 3;
     position: relative;
-    width: 92vw;
-    margin-inline: auto;
     display: flex;
-    gap: 200px;
+    align-items: center;
 
     @include small-tablet {
-      flex-direction: column;
-      justify-content: center;
-      width: 90vw;
+      height: 60vw;
+    }
+
+    @include mobile {
+      height: 600px;
+      padding-bottom: 100px;
     }
   }
   &__info {
-    padding-top: 172px;
-
     max-width: 33vw;
 
     @include small-tablet {
@@ -58,53 +59,47 @@
   }
   &__title {
     text-align: left;
+
     @include mobile {
-      font-size: 26px;
+      max-width: 60vw;
     }
   }
   &__subtitle {
-    margin: 1vw 0 2vw;
-    font-family: var(--font-family);
-    font-weight: 300;
-    font-size: 35px;
-    line-height: 140%;
-    color: var(--font-color);
-    opacity: 0.8;
-
+    margin-top: 12px;
+    text-align: left;
     @include mobile {
-      font-size: 18px;
     }
   }
   &__text {
     margin-top: 2vw;
+    @include small-tablet {
+      max-width: 48vw;
+    }
+    @include mobile {
+      max-width: 230px;
+    }
   }
 
   &__box {
-    margin-top: auto;
-    // z-index: 2;
-    position: relative;
-    // padding-top: 7vw;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 55%;
 
     @include small-tablet {
-      padding-top: 0;
-      padding-bottom: 200px;
-      display: flex;
-      justify-content: center;
+      top: 70%;
+      left: 70%;
     }
 
     @include mobile {
-      margin-top: 30px;
-      margin-left: 50px;
-      justify-content: start;
+      top: 84%;
+      left: 30%;
     }
   }
-  &__link {
+  &__btn {
     position: relative;
     display: block;
-
-    @include small-tablet {
-      // margin-inline: auto;
-    }
 
     svg {
       width: 7vw;
@@ -116,7 +111,7 @@
     }
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: -40px;
       left: -5vw;
@@ -124,7 +119,14 @@
       height: 4.5vw;
       background-repeat: no-repeat;
       background-size: contain;
-      background-image: url('../img/main-open_arrow.png');
+      background-image: url("../img/main-open_arrow.webp");
+
+      @include mobile {
+        top: 0;
+        left: -50px;
+        width: 40px;
+        height: 40px;
+      }
     }
     &::after {
       position: absolute;
@@ -133,18 +135,70 @@
       width: 12vw;
       min-width: 220px;
       height: auto;
-      content: 'Посмотрите короткое 45 секундное видео о компании';
+      content: "Посмотрите короткое 45 секундное видео о компании";
       font-family: var(--font-family);
       font-style: italic;
       font-weight: 500;
-      font-size: 20px;
+      font-size: clamp(0.75rem, 0.25rem + 1.78vw, 1.25rem);
       line-height: 140%;
       color: var(--font-color);
       @include small-tablet {
         top: -10vw;
-        font-size: 14px;
         min-width: 160px;
       }
+      @include mobile {
+        left: -80px;
+        width: 200px;
+      }
     }
+  }
+
+  &__modal {
+    // display: none;
+    // &-active {
+    //   position: relative;
+    //   z-index: 9;
+    //   position: fixed;
+    //   top: 0;
+    //   left: 0;
+    //   bottom: 0;
+    //   right: 0;
+
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+    //   background: rgba(0, 0, 0, 0.7);
+    // }
+
+    // &-video {
+    //   max-width: 70%;
+    //   width: 100%;
+    //   height: 500px;
+    //   @include mobile {
+    //     max-width: 90%;
+    //     height: 340px;
+    //   }
+    // }
+    // &-close {
+    //   position: absolute;
+    //   top: 150px;
+    //   right: 7vw;
+    //   width: 48px;
+    //   height: 48px;
+
+    //   cursor: pointer;
+
+    //   @include mobile {
+    //     top: 150px;
+    //     right: 6vw;
+    //     width: 28px;
+    //     height: 28px;
+    //   }
+    //   svg {
+    //     width: 100%;
+    //     height: auto;
+    //     fill: var(--accent-color);
+    //   }
+    // }
   }
 }

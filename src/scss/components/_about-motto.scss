@@ -1,0 +1,88 @@
+.about-motto {
+  position: relative;
+  padding: 170px 0;
+  &__line {
+    // z-index: -1;
+    top: 0;
+    right: -250px;
+  }
+
+  &__container {
+    z-index: 5;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__star {
+    top: -170px;
+    right: 0;
+  }
+  &__ring {
+    left: -550px;
+    bottom: -350px;
+  }
+  &__info {
+    max-width: 638px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+  &__text {
+    position: relative;
+    max-width: 520px;
+    &:nth-of-type(1) {
+      &::before {
+        position: absolute;
+        content: "";
+        width: 104px;
+        height: 80px;
+        top: -120px;
+        left: 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("../img/dots-up.png");
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        width: 104px;
+        height: 80px;
+        bottom: -40px;
+        right: -120px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("../img/dots-down.png");
+      }
+    }
+    &:nth-of-type(2) {
+      margin-left: auto;
+      text-align: right;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+  &__img {
+  }
+  &__motto {
+    position: absolute;
+    bottom: -80px;
+    left: -280px;
+    padding: 35px 67px;
+    max-width: 682px;
+    // width: 100%;
+
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--font-color);
+
+    border-radius: 38px;
+    box-shadow: 0 15px 20px 0 rgba(218, 192, 167, 0.5);
+    background-color: var(--light-color);
+  }
+}
