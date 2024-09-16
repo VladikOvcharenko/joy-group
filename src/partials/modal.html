@@ -11,8 +11,13 @@
     ></button>
     <div class="graph-modal__content modal__content">
       <h2 class="modal__title title">Заполните форму</h2>
-      <form class="modal__form">
-        <input type="name" placeholder="Ваше Имя" class="modal__form-inputs" />
+      <form id="form" class="modal__form" method="POST">
+        <input
+          type="name"
+          data-validate-field="name"
+          placeholder="Ваше Имя"
+          class="modal__form-inputs"
+        />
 
         <div class="modal__dropdown dropdown">
           <div class="dropdown__wrapper">
@@ -77,8 +82,8 @@
 
         <input
           type="tel"
-          placeholder="(000)-000-00-00"
           class="modal__form-inputs"
+          data-validate-field="tel"
         />
         <span class="modal__form-police"
           >Телефон необходим только для того, чтобы психолог связался с вами в

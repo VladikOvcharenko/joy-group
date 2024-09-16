@@ -10,9 +10,9 @@ const reviewsCase = new Swiper(reviewsSlider, {
   modules: [Navigation, Pagination, Autoplay],
   slidesPerView: "1",
   loop: true,
-  // autoplay: {
-  //   delay: 4000,
-  // },
+  autoplay: {
+    delay: 4000,
+  },
   navigation: {
     nextEl: ".main-reviews__btn-next",
     prevEl: ".main-reviews__btn-prev",
@@ -22,9 +22,9 @@ const meetingCase = new Swiper(meetingSlider, {
   modules: [Navigation, Pagination, Autoplay],
   slidesPerView: "1",
   loop: true,
-  // autoplay: {
-  //   delay: 5000,
-  // },
+  autoplay: {
+    delay: 5000,
+  },
   navigation: {
     nextEl: ".main-meeting__btn-next",
     prevEl: ".main-meeting__btn-prev",

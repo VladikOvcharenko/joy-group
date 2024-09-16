@@ -15,7 +15,7 @@
     right: -650px;
 
     @include small-tablet {
-      right: -550px;
+      right: -580px;
       bottom: -500px;
     }
 
@@ -38,8 +38,6 @@
     position: relative;
     max-width: 1000px;
   }
-  &__title {
-  }
   &__list {
     margin-top: 66px;
     display: flex;
@@ -58,16 +56,32 @@
     flex-direction: column;
     align-items: center;
     gap: 38px;
+
+    &:first-child .meditation-hero__item-img {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../img/money.png");
+    }
+    &:nth-child(2) .meditation-hero__item-img {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../img/boll.png");
+      background-size: 120px;
+      @include small-tablet {
+        background-size: 100px;
+      }
+    }
+    &:last-child .meditation-hero__item-img {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../img/heart.png");
+    }
     &-img {
       width: 204px;
       height: 204px;
-      padding: 20px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
 
       background: var(--light-color);
+      background-size: 150px;
 
       border-radius: 50%;
       box-shadow: 0 15px 20px 0 rgba(218, 192, 167, 0.5);
@@ -75,6 +89,7 @@
       @include small-tablet {
         width: 160px;
         height: 160px;
+        background-size: 120px;
       }
     }
     &-text {

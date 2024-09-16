@@ -168,10 +168,6 @@
       @include tablet {
         font-size: 12px;
       }
-
-      @include small-tablet {
-        // font-size: 10px;
-      }
     }
     &-btn {
       margin-top: auto;

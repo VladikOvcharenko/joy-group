@@ -1,8 +1,7 @@
 .session-price {
   position: relative;
   padding: 40px 0;
-  &__container {
-  }
+
   &__list {
     display: flex;
     align-items: stretch;
@@ -35,7 +34,6 @@
   &__title {
     font-family: var(--font-family);
     font-size: clamp(1.25rem, 0.5rem + 2vw, 2rem);
-    // font-size: 32px;
     font-weight: 300;
     text-transform: uppercase;
     color: var(--accent-color);
@@ -49,11 +47,9 @@
   }
   &__price {
     font-size: clamp(1.125rem, 0.5rem + 1.67vw, 1.75rem);
-    // font-size: 28px;
 
     &-old {
       font-size: clamp(1rem, 0.5rem + 1.33vw, 1.5rem);
-      // font-size: 24px;
       color: var(--accent-color);
       text-decoration: line-through;
     }

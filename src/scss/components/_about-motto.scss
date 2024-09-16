@@ -2,7 +2,6 @@
   position: relative;
   padding: 170px 0;
   &__line {
-    // z-index: -1;
     top: 0;
     right: -250px;
   }
@@ -64,15 +63,13 @@
   &__wrapper {
     position: relative;
   }
-  &__img {
-  }
+
   &__motto {
     position: absolute;
     bottom: -80px;
     left: -280px;
     padding: 35px 67px;
     max-width: 682px;
-    // width: 100%;
 
     font-family: var(--second-family);
     font-weight: 400;

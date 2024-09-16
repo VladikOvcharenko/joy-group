@@ -59,9 +59,6 @@
     top: 15%;
   }
 
-  &__subtitle {
-  }
-
   &__wrapper {
     margin-top: 20px;
     display: flex;
@@ -89,8 +86,6 @@
     @include mobile {
       text-align: center;
     }
-  }
-  &__link {
   }
   &__img {
     z-index: 5;

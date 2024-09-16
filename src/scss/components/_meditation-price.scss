@@ -57,7 +57,6 @@
 
     @include tablet {
       max-width: 100%;
-      // padding: 40px 100px;
     }
 
     @include mobile {
@@ -107,10 +106,6 @@
       @include mobile {
         text-align: center;
       }
-    }
-    &-text {
-    }
-    &-btn {
     }
   }
 }

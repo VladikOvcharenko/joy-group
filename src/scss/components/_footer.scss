@@ -2,6 +2,7 @@
   position: relative;
   padding-top: 200px;
   background: var(--bg-color);
+  overflow: hidden;
 
   &__sky {
     top: 0;
@@ -65,8 +66,7 @@
         gap: 8px;
       }
     }
-    &-item {
-    }
+
     &-link {
       font-family: var(--second-family);
       font-weight: 400;
@@ -80,7 +80,7 @@
 
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
 
     @include tablet {
       align-items: center;
@@ -94,7 +94,7 @@
     &-phone {
       font-family: var(--second-family);
       font-weight: 400;
-      font-size: 32px;
+      font-size: 26px;
       color: #000;
     }
     &-adress {
@@ -107,9 +107,6 @@
       display: flex;
       align-items: center;
       gap: 30px;
-    }
-
-    &-link {
     }
   }
   &__copy {

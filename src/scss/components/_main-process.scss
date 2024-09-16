@@ -44,10 +44,6 @@
     &:nth-child(2) {
       top: 550px;
       left: 80px;
-      @include big-desktop {
-      }
-      @include tablet {
-      }
     }
   }
   &__cloud {
@@ -156,8 +152,6 @@
         margin-top: 0;
         flex-direction: column-reverse;
       }
-    }
-    @include mobile {
     }
   }
   &__box {

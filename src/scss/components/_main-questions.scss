@@ -11,7 +11,7 @@
     height: 708px;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url("../img/main-process_decor.webp");
+    background-image: url("../img/decor.webp");
   }
 
   &__sky {
@@ -78,9 +78,6 @@
         flex-direction: column;
         gap: 16px;
       }
-    }
-
-    &-link {
     }
   }
 }

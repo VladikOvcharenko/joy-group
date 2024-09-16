@@ -42,7 +42,6 @@
   &__video {
     position: relative;
     min-height: 650px;
-
     height: 100%;
 
     @include mobile {
@@ -93,11 +92,5 @@
     @include mobile {
       justify-items: center;
     }
-  }
-  &__title {
-  }
-  &__text {
-  }
-  &__link {
   }
 }

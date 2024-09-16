@@ -17,7 +17,6 @@ class ModalVideo {
     this.videoSrc = videoSrc;
 
     if (!this.modal || !this.openButton || !this.closeButton || !this.video) {
-      // console.error("Не удалось найти один из элементов для модального окна");
       return;
     }
 
